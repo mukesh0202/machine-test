@@ -1,0 +1,58 @@
+<div  class="center">
+  <h1 class="address">Form To Update A Address </h1>
+  <form>
+    <div class="inside-center">
+      <h4>Please Enter The Country Name</h4>
+      <mat-form-field>
+        <mat-label> Country Name</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="country" (selectionChange)="getState($event)">
+          <mat-option *ngFor="let country of Country; let i=index" [value]="country.id">
+            {{country.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="inside-center" *ngIf="showState">
+      <h4>Please Enter The State Name</h4>
+      <mat-form-field>
+        <mat-label> State Name</mat-label>
+        <mat-select [(ngModel)]="stateselectedValue" name="state" (selectionChange)="getCity($event)">
+          <mat-option *ngFor="let state of Sates let i = index" [value]="state.id">
+            {{state.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+
+    <div class="inside-center" *ngIf="showcity">
+      <h4>Please Enter The City Name</h4>
+      <mat-form-field>
+        <mat-label> City Name</mat-label>
+        <mat-select [(ngModel)]="cityselectedValue" name="city" (selectionChange)="getPlaces($event)">
+          <mat-option *ngFor="let city of cities" [value]="city.id">
+            {{city.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+
+    <div class="inside-center" *ngIf="showplace">
+      <h4>Please Enter The Place Name</h4>
+      <mat-form-field>
+        <mat-label> Place Name</mat-label>
+        <mat-select [(ngModel)]="placeselectedValue" name="place">
+          <mat-option *ngFor="let place of places" [value]="place.id">
+            {{place.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+
+
+  </form>
+
+</div>

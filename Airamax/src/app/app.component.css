@@ -1,0 +1,18 @@
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+  }
+  .inside-center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid red;
+  }
+
+  p {
+    font-family: Lato;
+  }
+  .address{
+    margin: 10% 0% 5% 30%;
+  }
